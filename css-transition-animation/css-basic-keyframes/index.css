@@ -1,0 +1,66 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+article {
+    /* animation-name: basic;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease; */
+    color: lightskyblue;
+    animation: moveAround infinite ease;
+
+}
+
+@keyframes moveAround {
+    0% {
+        transform-origin: translateX(0) translateY(0) scale(1);
+    }
+
+    20% {
+        transform-origin: translateX(-100px) translateY(20) scale(1.4);
+    }
+
+    50% {
+        transform-origin: translateX(-200px) translateY(200px) scale(1.5);
+    }
+
+    80% {
+        transform-origin: translateX(-100px) translateY(2) scale(2);
+    }
+
+    100% {
+        transform-origin: translateX(-120px) translateY(-20) scale(4);
+    }
+
+}
+
+
+@keyframes basic {
+    from {
+        color: coral;
+        transform: scale(1);
+    }
+
+    to {
+        color: lightseagreen;
+        transform: scale(2);
+    }
+}
